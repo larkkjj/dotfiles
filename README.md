@@ -5,8 +5,6 @@ My custom dot files(Updated)
 
 Be sure to have Iosevka Nerd Font or any other Nerd Font for symbols.
 
-### Setup
-
 ## Install packages
 If you're on Arch, you can simple run this and it will install all the stuff:
 `yay -S starship fastfetch grim slurp fish aylur-gtk-shell hyprland ttf-fantasquesansm-nerd swww papirus-icon-theme kitty fuzzel git base-devel`

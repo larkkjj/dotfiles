@@ -1,21 +1,9 @@
-![teste](https://github.com/user-attachments/assets/1572ad33-df25-4dc9-bf87-18c22379e39a)
+My custom dot files(Updated)
+============
 
-(Neccessary)
-Aylur's GTK Shell (AGS),
-kitty,
-Hyprland,
-swww,
-yay,
+![WhatsApp Image 2025-06-07 at 11 29 26](https://github.com/user-attachments/assets/5a1c092c-6165-4796-83eb-3ffe6bf7429e)
 
-(optional)
-fuzzel,
-A nerd font like FantasqueSansM,
-Papirus Icon Theme,
-grim,
-slurp,
-fastfetch,
-starship,
-fish,
+Be sure to have Iosevka Nerd Font or any other Nerd Font for symbols.
 
 (STEP 1)
 If you're on Arch, you can simple run this and it will install all the stuff:

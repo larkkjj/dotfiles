@@ -1,96 +1,100 @@
+// https://gitlab.gnome.org/GNOME/gtk/-/blob/gtk-3-24/gtk/theme/Adwaita/_colors-public.scss
+$fg-color: #{"@theme_fg_color"};
+$bg-color: #{"@theme_bg_color"};
+
 * {
     all: unset;
-    font-family: 'FantasqueSansM Nerd Font';
-    font-size: 14px;
 }
 
-.window, .player_window {
-    min-height: 25px;
-}
+window.Bar {
+    font-family: "Iosevka Nerd Font Mono";
+    background: transparent;
+    font-weight: bold;
+    padding: 2px;
 
-.start {
-    border-radius: 30px;
-    background-color: #151515;
-    min-height: 25px;
-}
+    .insidebox,
+    .insidebutton {
+        padding: 2px;
+        border-radius: 10px;
+    }
 
-.end {
-    border-radius: 30px;
-    background-color: #151515;
-    min-height: 25px;
-}
+    .insidebox {
+        background-color: #374145;
+        padding: 2px;
+    }
 
-.volume_slider trough {
-    background-color: rgb(68, 68, 68);
-    min-height: 5px;
-    border-radius: 20px;
-    border-width: 2px;
-}
+    .insidebutton {
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
 
-.volume_slider highlight {
-    background-color: rgb(255, 255, 255);
-    transition: ease-in 0.5s;
-    border-width: 2px;
-    border-radius: 30px;
-}
+    .activebox {
+        background-color: #495156;
+    }
 
-.progress_slider trough {
-    background-color: rgb(110, 110, 110);
-    min-height: 4px;
-    border-radius: 30px;
-}
+    .activebox,
+    .inactivebox {
+        border-radius: 10px;
+        padding: 4px;
+    }
 
-.progress_slider highlight {
-    background-color: white;
-    min-height: 4px;
-    border-radius: 30px;
-}
+    > centerbox {
+        background: $bg-color;
+        border-radius: 10px;
+        margin: 2px;
+    }
 
-.brightness_slider highlight {
-    min-height: 5px;
-    border-radius: 30px;
-    background-color: white;
-}
+    button {
+        min-height: 15px;
+        border-radius: 8px;
+    }
 
-.brightness_slider trough {
-    min-height: 5px;
-    border-radius: 20px;
-    background-color: rgb(110, 110, 110)
-}
+    > box {
+        min-height: 15px;
+        transition: all ease-in-out 150ms;
+    }
 
-.player_box {
-    background-color: #151515;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 30px;
-}
+    .active,
+    .inactive {
+        transition: all ease-in-out 150ms;
+        border-radius: 30px;
+        min-height: 15px;
+    }
 
-.player_window {
-    background-color: #151515;
-    min-height: 120px;
-    min-width: 50px;
-    border-radius: 15px;
-}
+    .active {
+        transition: all ease-in-out 150ms;
+        background-color: #7fbbb3;
+        min-width: 30px;
+    }
 
-.sliders {
-    background-color: #151515;
-    border-radius: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
+    .inactive {
+        transition: all ease-in-out 150ms;
+        background-color: #e67e80;
+        min-width: 15px;
+    }
 
-.status {
-    background-color: #151515;
-    border-radius: 30px;
-    margin-left: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
+    circularprogress {
+        transition: all ease-in-out 500ms;
+        min-height: 3px;
+        font-size: 6px;
+        color: yellow;
+        background-color: #495156;
+    }
 
-.track {
-    color: rgb(0, 255, 13);
-}
+    .reallylow_usage {
+        color: #7fbbb3;
+    }
+    .low_usage {
+        color: #a7c080;
+    }
 
-.playlist {
-    color: rgb(122, 65, 255);
+    .medium_usage {
+        color: #dbbc7f;
+    }
+
+    .high_usage {
+        color: #e67e80;
+    }
 }

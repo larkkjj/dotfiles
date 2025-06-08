@@ -5,6 +5,26 @@ import Hyprland from "gi://AstalHyprland";
 
 const hyprland = Hyprland.get_default();
 
+/*{bind(w, "clients").as((c) =>
+  c
+    .filter((c) => c.workspace.id === w.id)
+    .map((c) => (
+      <icon
+        hexpand={false}
+        iconSize={8}
+        setup={(self) =>
+          c.class
+            .split("\.")
+            .splice(0, 2)
+            .map(
+              (c) =>
+                (self.icon = `${c.toLowerCase()}-symbolic`),
+            )
+        }
+      />
+    )),
+)}*/
+
 export default function WorkspaceWidget() {
   return (
     <box halign={Gtk.Align.START} className={"insidebox"}>
@@ -30,25 +50,6 @@ export default function WorkspaceWidget() {
                       fw.id === w.id ? "active" : "inactive",
                     )}
                   />
-                  {bind(w, "clients").as((c) =>
-                    c
-                      .filter((c) => c.workspace.id === w.id)
-                      .map((c) => (
-                        <icon
-                          hexpand={false}
-                          iconSize={8}
-                          setup={(self) =>
-                            c.class
-                              .split("\.")
-                              .splice(0, 2)
-                              .map(
-                                (c) =>
-                                  (self.icon = `${c.toLowerCase()}-symbolic`),
-                              )
-                          }
-                        />
-                      )),
-                  )}
                 </box>
               </button>
             </box>

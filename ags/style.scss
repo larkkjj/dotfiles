@@ -12,6 +12,7 @@ window.Bar {
     background: transparent;
     font-weight: bold;
     padding: 2px;
+    min-height: 20px;
 
     .insidebox,
     .insidebutton {
@@ -61,7 +62,7 @@ window.Bar {
     .inactive {
         transition: all ease-in-out 150ms;
         border-radius: 30px;
-        min-height: 6px;
+        min-height: 4px;
     }
 
     .active {
@@ -108,7 +109,7 @@ window.Bar {
     .volumeslider {
         * {
             border: none;
-            min-height: 5px;
+            min-height: 3px;
             border-radius: 10px;
         }
 

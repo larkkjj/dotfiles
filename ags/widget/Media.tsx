@@ -15,7 +15,7 @@ export function MediaWidget({ player }: { player: AstalMpris.Player }) {
               margin={4}
               setup={(self) => {
                 self.css = `
-                min-width: 30px;
+                min-width: 22px;
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -39,7 +39,7 @@ export function MediaWidget({ player }: { player: AstalMpris.Player }) {
           </button>
         ),
       )}
-      <box valign={Gtk.Align.CENTER} spacing={2} vertical={true}>
+      <box valign={Gtk.Align.CENTER} vertical={true}>
         <button onClicked={() => showhelper.set(!showhelper.get())}>
           <box halign={Gtk.Align.CENTER}>
             <label
@@ -53,7 +53,7 @@ export function MediaWidget({ player }: { player: AstalMpris.Player }) {
           </box>
         </button>
         <slider
-          widthRequest={150}
+          widthRequest={120}
           marginStart={10}
           marginEnd={10}
           min={0}
@@ -75,6 +75,7 @@ export function MediaWidget({ player }: { player: AstalMpris.Player }) {
       >
         <box marginLeft={5} spacing={20}>
           <button
+            onClicked={() => player.previous()}
             label={bind(player, "canGoPrevious").as((p) =>
               p === 1 ? "󰒮" : "󰂭",
             )}
@@ -86,6 +87,7 @@ export function MediaWidget({ player }: { player: AstalMpris.Player }) {
             )}
           />
           <button
+            onClicked={() => player.next()}
             label={bind(player, "canGoNext").as((p) => (p === 1 ? "󰒭" : "󰂭"))}
           />
         </box>
@@ -102,7 +104,6 @@ export default function PlayerWidget() {
           p
             .sort((a, b) => a.busName - b.busName)
             .slice(0, 1)
-            .filter((p) => p.title.length > 0)
             .map((p) => <MediaWidget player={p} />)
         ) : (
           <label label={"Nada tocando no momento"} />

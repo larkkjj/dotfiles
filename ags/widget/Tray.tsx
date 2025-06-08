@@ -3,7 +3,9 @@ import { Variable, bind } from "astal";
 import { CpuWidget, DiskWidget, RamWidget } from "./Tools";
 import { PrintWidget } from "./Tools";
 import Tray from "gi://AstalTray";
-import { CavaWidget } from "./Cava";
+import VolumeWidget from "./Volume";
+import Brightness from "./custom/brightness";
+import BrightnessWidget from "./Brightness";
 
 const tray = Tray.get_default();
 const time = Variable("").poll(1000, "date +%H:%M:%S");
@@ -35,8 +37,9 @@ export function TrayItems() {
 export default function TrayWidget() {
   return (
     <box className={"insidebox"} halign={Gtk.Align.END} spacing={5}>
-      <CavaWidget />
       <TrayItems />
+      <BrightnessWidget />
+      <VolumeWidget />
       <DiskWidget />
       <RamWidget />
       <CpuWidget />

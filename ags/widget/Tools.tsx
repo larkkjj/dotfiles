@@ -2,7 +2,7 @@ import { Gtk, Astal } from "astal/gtk3";
 import { Variable, bind, exec, execAsync } from "astal";
 const divide = ([total, free]) => free / total;
 
-const cpu = Variable(0).poll(1000, "top -b -n 1", (out) =>
+const cpu = Variable(0).poll(2000, "top -b -n 1", (out) =>
   divide([
     100,
     out
@@ -35,6 +35,7 @@ const disk = Variable(0).poll(2000, "df", (disk_usage) =>
 export function RamWidget() {
   return (
     <circularprogress
+      tooltipText={bind(ram).as((r) => `ram usada: ${r.toPrecision(1) * 100}%`)}
       widthRequest={30}
       className={bind(ram).as((c) =>
         c > 0.5
@@ -57,6 +58,9 @@ export function RamWidget() {
 export function DiskWidget() {
   return (
     <circularprogress
+      tooltipText={bind(disk).as(
+        (d) => `disco usado: ${d.toPrecision(1) * 100}%`,
+      )}
       widthRequest={30}
       className={bind(disk).as((c) =>
         c > 0.5
@@ -79,6 +83,7 @@ export function DiskWidget() {
 export function CpuWidget() {
   return (
     <circularprogress
+      tooltipText={bind(cpu).as((c) => `cpu usada: ${c.toPrecision(01) * 100}%`)}
       widthRequest={30}
       className={bind(cpu).as((c) =>
         c > 0.3

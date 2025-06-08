@@ -1,7 +1,6 @@
 import { App, Astal, Gtk, Gdk } from "astal/gtk3";
-import WorkspaceWidget from "./Workspace";
+import StartWidget from "./Start";
 import TrayWidget from "./Tray";
-import { Variable } from "astal";
 import PlayerWidget from "./Media";
 
 export default function Bar(gdkmonitor: Gdk.Monitor) {
@@ -19,7 +18,7 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
       application={App}
     >
       <centerbox
-        startWidget={<WorkspaceWidget />}
+        startWidget={<StartWidget />}
         centerWidget={<PlayerWidget />}
         endWidget={<TrayWidget />}
       ></centerbox>

@@ -7,6 +7,7 @@ $bg-color: #{"@theme_bg_color"};
 }
 
 window.Bar {
+    font-size: 13px;
     font-family: "Iosevka Nerd Font Mono";
     background: transparent;
     font-weight: bold;
@@ -14,20 +15,20 @@ window.Bar {
 
     .insidebox,
     .insidebutton {
+        transition: all ease-in-out 150ms;
         padding: 2px;
         border-radius: 10px;
-    }
-
-    .insidebox {
         background-color: #374145;
-        padding: 2px;
     }
 
-    .insidebutton {
-        padding-top: 4px;
-        padding-bottom: 4px;
-        padding-left: 2px;
-        padding-right: 2px;
+    .insidebutton:hover {
+        transition: all ease-in-out 150ms;
+        background-color: #495156;
+    }
+
+    .insidebutton:active {
+        transition: all ease-in-out 150ms;
+        background-color: #374145;
     }
 
     .activebox {
@@ -60,7 +61,7 @@ window.Bar {
     .inactive {
         transition: all ease-in-out 150ms;
         border-radius: 30px;
-        min-height: 15px;
+        min-height: 6px;
     }
 
     .active {
@@ -83,18 +84,54 @@ window.Bar {
         background-color: #495156;
     }
 
-    .reallylow_usage {
+    .reallylow_usage,
+    .reallylow_volume {
         color: #7fbbb3;
     }
-    .low_usage {
+
+    .low_usage,
+    .low_volume {
         color: #a7c080;
     }
 
-    .medium_usage {
+    .medium_usage,
+    .medium_volume {
         color: #dbbc7f;
     }
 
-    .high_usage {
+    .high_usage,
+    .high_volume {
         color: #e67e80;
     }
+
+    .mediaslider,
+    .volumeslider {
+        * {
+            border: none;
+            min-height: 5px;
+            border-radius: 10px;
+        }
+
+        & slider {
+            border-style: none;
+            background-color: transparent;
+            border-color: transparent;
+            border-width: 0px;
+            color: transparent;
+        }
+        & trough {
+            background-color: #495156;
+        }
+        & highlight {
+            background-color: #a7c080;
+        }
+    }
+}
+
+tooltip {
+    box-shadow: none;
+    font-family: "Iosevka Nerd Font Mono";
+    background-color: #374145;
+    padding: 2px;
+    border-radius: 10px;
 }

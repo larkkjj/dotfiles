@@ -35,12 +35,16 @@ export default function WorkspaceWidget() {
                       .filter((c) => c.workspace.id === w.id)
                       .map((c) => (
                         <icon
-                          iconSize={12}
+                          hexpand={false}
+                          iconSize={8}
                           setup={(self) =>
                             c.class
                               .split("\.")
                               .splice(0, 2)
-                              .map((c) => (self.icon = `${c.toLowerCase()}`))
+                              .map(
+                                (c) =>
+                                  (self.icon = `${c.toLowerCase()}-symbolic`),
+                              )
                           }
                         />
                       )),

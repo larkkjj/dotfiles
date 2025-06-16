@@ -8,6 +8,7 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
 
   return (
     <window
+      name={"Bar"}
       marginTop={15}
       marginLeft={15}
       marginRight={15}
@@ -21,7 +22,7 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
         startWidget={<StartWidget />}
         centerWidget={<PlayerWidget />}
         endWidget={<TrayWidget />}
-      ></centerbox>
+      />
     </window>
   );
 }

@@ -22,7 +22,7 @@
     },
     {
       "type": "packages",
-      "format": "{rpm}",
+      "format": "{1}",
       "keyColor": "red",
     },
     {

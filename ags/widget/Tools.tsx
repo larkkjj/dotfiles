@@ -11,7 +11,7 @@ const cpu = Variable(0).poll(2000, "top -b -n 1", (out) =>
     100,
     out
       .split("\n")
-      .find((line) => line.includes("Cpu(s)"))
+      .find((line) => line.includes("CPU(s)"))
       .split(/\s+/)[1]
       .replace(",", "."),
   ]),
@@ -21,7 +21,7 @@ const ram = Variable(0).poll(2000, "free", (mem_usage) =>
   divide(
     mem_usage
       .split("\n")
-      .find((line) => line.includes("Mem:"))
+      .find((line) => line.includes("Mem.:"))
       .split(/\s+/)
       .splice(1, 2),
   ),

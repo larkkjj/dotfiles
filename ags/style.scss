@@ -1,6 +1,6 @@
 // https://gitlab.gnome.org/GNOME/gtk/-/blob/gtk-3-24/gtk/theme/Adwaita/_colors-public.scss
-$fg-color: #{"@theme_fg_color"};
-$bg-color: #{"@theme_bg_color"};
+$fg-color: #b0bec5;
+$bg-color: #292929;
 
 * {
     all: unset;
@@ -19,7 +19,7 @@ window.Bar {
         transition: all ease-in-out 150ms;
         padding: 2px;
         border-radius: 10px;
-        background-color: #374145;
+        background-color: #292929;
     }
 
     .insidebutton:hover {
@@ -44,7 +44,6 @@ window.Bar {
 
     > centerbox {
         background: $bg-color;
-        border-radius: 10px;
         margin: 2px;
     }
 
@@ -61,20 +60,20 @@ window.Bar {
     .active,
     .inactive {
         transition: all ease-in-out 150ms;
-        border-radius: 30px;
+        border: 2px solid #b0bec5;
         min-height: 4px;
+        min-width: 10px;
     }
 
     .active {
         transition: all ease-in-out 150ms;
-        background-color: #7fbbb3;
-        min-width: 30px;
+        border-radius: 10px;
+        background-color: #b0bec5;
     }
 
     .inactive {
         transition: all ease-in-out 150ms;
-        background-color: #e67e80;
-        min-width: 15px;
+        border-radius: 6px;
     }
 
     circularprogress {
@@ -126,6 +125,11 @@ window.Bar {
         & highlight {
             background-color: #a7c080;
         }
+    }
+    .separator {
+        background-color: #727272;
+        min-width: 1px;
+        min-height: 2px;
     }
 }
 

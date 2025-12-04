@@ -3,6 +3,6 @@
 font_family	RecMonoCasual Nerd Font
 
 # BEGIN_KITTY_THEME
-# Carbonfox
+# Nordfox
 include current-theme.conf
 # END_KITTY_THEME

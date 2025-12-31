@@ -1,0 +1,161 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    }
+  },
+  {
+    "bindings": {
+      "backspace": "editor::Backspace"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-shift-a": "editor::SelectLine"
+    }
+  },
+  {
+    "bindings": {
+      "shift-down": "editor::SelectDown"
+    }
+  },
+  {
+    "bindings": {
+      "shift-left": "editor::SelectLeft"
+    }
+  },
+  {
+    "bindings": {
+      "shift-up": "editor::SelectUp"
+    }
+  },
+  {
+    "bindings": {
+      "up": "editor::MoveUp"
+    }
+  },
+  {
+    "bindings": {
+      "left": "editor::MoveLeft"
+    }
+  },
+  {
+    "bindings": {
+      "right": "editor::MoveRight"
+    }
+  },
+  {
+    "bindings": {
+      "down": "editor::MoveDown"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-shift-left": "editor::SelectToPreviousWordStart"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-right": "editor::MoveToNextWordEnd"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-left": "editor::MoveToPreviousWordStart"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-down": "editor::MovePageDown"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-up": "editor::MovePageUp"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-shift-right": "editor::SelectToNextWordEnd"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-backspace": "editor::DeleteToPreviousWordStart"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-a": "editor::SelectAll"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-alt-left": "panel::PreviousPanelTab"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-alt-right": "panel::NextPanelTab"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-shift-f": "search::ToggleReplace"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-s": "workspace::Save"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-f": "buffer_search::Deploy"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-c": "editor::Copy"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-v": "editor::Paste"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-z": "editor::Undo"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-shift-z": "editor::Redo"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-x": "editor::Cut"
+    }
+  },
+  {
+    "bindings": {
+      "enter": "editor::Newline"
+    }
+  }
+]

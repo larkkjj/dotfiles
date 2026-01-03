@@ -1,8 +1,0 @@
-#font_family	GeistMono Nerd Font
-#font_family	MartianMono Nerd Font
-font_family	RecMonoCasual Nerd Font
-
-# BEGIN_KITTY_THEME
-# Nordfox
-include current-theme.conf
-# END_KITTY_THEME

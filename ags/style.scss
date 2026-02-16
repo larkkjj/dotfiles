@@ -1,0 +1,48 @@
+// https://gitlab.gnome.org/GNOME/gtk/-/blob/gtk-3-24/gtk/theme/Adwaita/_colors-public.scss
+$fg-color: #{"@theme_fg_color"};
+$bg-color: #{"@theme_bg_color"};
+
+window {
+  font-family: "Maple Mono NF";
+  background: transparent;
+  color: $fg-color;
+  font-size: 12px;
+
+  .material {
+    font-family: "Material Icons";
+    font-size: 16px;
+  }
+
+  > centerbox {
+    background: $bg-color;
+    border-radius: 10px;
+  }
+
+  box {
+    background: $bg-color;
+    border-radius: 10px;
+    margin: 2px;
+  }
+
+  button {
+    background-color: transparent;
+  }
+  button:active {
+    transition: all ease-in-out 100ms;
+    opacity: 0.4;
+  }
+
+  highlight {
+    background-color: $fg-color;
+    min-width: 5px;
+    min-height: 5px;
+  }
+
+  slider {
+    background-color: transparent;
+    color: transparent;
+    min-width: 0px;
+    min-height: 0px;
+    box-shadow: unset;
+  }
+}
